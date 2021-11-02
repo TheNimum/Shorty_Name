@@ -6,9 +6,13 @@
     <StackLayout BackgroundColor="Beige">
         
         <Entry Placeholder="First Name" PlaceholderColor="HotPink" 
-               Keyboard="Text" TextColor="DarkRed" HorizontalOptions="Center" WidthRequest="265" />
-        <Entry Placeholder="Last Name" PlaceholderColor="HotPink" Keyboard="Text" 
-               TextColor="DarkRed" HorizontalOptions="Center" WidthRequest="265" />
+               TextChanged="NameChange" 
+               Keyboard="Text" TextColor="DarkRed" 
+               HorizontalOptions="Center" WidthRequest="265" />
+        <Entry Placeholder="Last Name" PlaceholderColor="HotPink" 
+               TextChanged="LastNameChange"
+               Keyboard="Text" TextColor="DarkRed" 
+               HorizontalOptions="Center" WidthRequest="265" />
       
         <Button Text="Send to Convert" Clicked="OnClicked" BackgroundColor="HotPink" WidthRequest="100" HorizontalOptions="Center"  />
     </StackLayout>

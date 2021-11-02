@@ -18,5 +18,15 @@ namespace Shorty_Name
         {
             Console.WriteLine("Test if work");
         }
+
+        public void NameChange(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        public void LastNameChange(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
