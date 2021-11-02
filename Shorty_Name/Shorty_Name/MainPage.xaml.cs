@@ -14,5 +14,9 @@ namespace Shorty_Name
         {
             InitializeComponent();
         }
+        public void OnClicked(object sender , EventArgs args)
+        {
+            Console.WriteLine("Test if work");
+        }
     }
 }
