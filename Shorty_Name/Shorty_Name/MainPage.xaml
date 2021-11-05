@@ -5,16 +5,24 @@
 
     <StackLayout BackgroundColor="Beige">
         
-        <Entry Placeholder="First Name" PlaceholderColor="HotPink" 
-               TextChanged="NameChange" 
+        <Entry x:Name="Fname" Placeholder="First Name" PlaceholderColor="HotPink" 
+              Text="" 
                Keyboard="Text" TextColor="DarkRed" 
                HorizontalOptions="Center" WidthRequest="265" />
-        <Entry Placeholder="Last Name" PlaceholderColor="HotPink" 
-               TextChanged="LastNameChange"
+        <Entry x:Name="Lname" Placeholder="Last Name" PlaceholderColor="HotPink" 
+               Text=""
                Keyboard="Text" TextColor="DarkRed" 
                HorizontalOptions="Center" WidthRequest="265" />
-      
-        <Button Text="Send to Convert" Clicked="OnClicked" BackgroundColor="HotPink" WidthRequest="100" HorizontalOptions="Center"  />
-    </StackLayout>
-
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+        <Button Text="add to" Clicked="OnClicked" BackgroundColor="HotPink"
+                WidthRequest="100"/>
+        <Button Text="Clear" Clicked="OnClickedClear" BackgroundColor="HotPink"
+                WidthRequest="100"/>
+        </StackLayout>
+        
+        <StackLayout x:Name="ResultList">
+        
+        </StackLayout>
+</StackLayout>
 </ContentPage>

@@ -14,19 +14,17 @@ namespace Shorty_Name
         {
             InitializeComponent();
         }
-        public void OnClicked(object sender , EventArgs args)
+        public void OnClicked(object sender, EventArgs args)
         {
             Console.WriteLine("Test if work");
+            Label addtoList = new Label();
+            addtoList.Text = Fname.Text + " "  +Lname.Text;
+            ResultList.Children.Add(addtoList);
         }
 
-        public void NameChange(object sender, TextChangedEventArgs e)
+        private void OnClickedClear(object sender, EventArgs e)
         {
-
-        }
-
-        public void LastNameChange(object sender, TextChangedEventArgs e)
-        {
-
+            ResultList.Children.Clear();
         }
     }
 }
