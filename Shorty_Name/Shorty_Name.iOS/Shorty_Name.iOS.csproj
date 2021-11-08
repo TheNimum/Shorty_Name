@@ -133,4 +133,7 @@
       <Name>Shorty_Name</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\trashcan.png" />
+  </ItemGroup>
 </Project>

@@ -26,9 +26,15 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Label Text="{Binding Name}" FontSize="Medium">
-                             
-                        </Label>
+                        <FlexLayout Padding="20, 0" JustifyContent="SpaceBetween" AlignContent="center">
+                            <Label Text="{Binding Name}" FontSize="Medium" />
+                            <ImageButton 
+                                Source="trashcan.png"
+                                Scale="0.4"
+                                />
+
+                        </FlexLayout>
+                              
                      
                    
                     </ViewCell>
