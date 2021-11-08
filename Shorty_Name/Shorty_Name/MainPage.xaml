@@ -1,28 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Shorty_Name" 
              x:Class="Shorty_Name.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:NameCheckViewModel/>
+    </ContentPage.BindingContext>
 
     <StackLayout BackgroundColor="Beige">
         
         <Entry x:Name="Fname" Placeholder="First Name" PlaceholderColor="HotPink" 
-              Text="" 
+              Text="{Binding NewNameInput}"
                Keyboard="Text" TextColor="DarkRed" 
-               HorizontalOptions="Center" WidthRequest="265" />
-        <Entry x:Name="Lname" Placeholder="Last Name" PlaceholderColor="HotPink" 
-               Text=""
-               Keyboard="Text" TextColor="DarkRed" 
-               HorizontalOptions="Center" WidthRequest="265" />
+               HorizontalOptions="Center" WidthRequest="265"
+               ReturnCommand="{Binding AddNameCommand}"
+               />
+       
         
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-        <Button Text="add to" Clicked="OnClicked" BackgroundColor="HotPink"
-                WidthRequest="100"/>
-        <Button Text="Clear" Clicked="OnClickedClear" BackgroundColor="HotPink"
-                WidthRequest="100"/>
-        </StackLayout>
         
-        <StackLayout x:Name="ResultList">
+        </StackLayout> 
         
-        </StackLayout>
+        <ListView x:Name="ResultList" ItemsSource="{Binding NameChecks}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Name}" FontSize="Medium">
+                             
+                        </Label>
+                     
+                   
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 </StackLayout>
 </ContentPage>
