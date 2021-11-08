@@ -7,11 +7,11 @@ namespace Shorty_Name
    public class NameCheck
     {
         public string Name { get; set; }
-        public bool isChecked { get; set; }
+        public bool IsChecked { get; set; }
         public NameCheck(string name, bool Ischecked)
         {
             this.Name = name;
-            this.isChecked = Ischecked;
+            this.IsChecked = Ischecked;
         }
     }
 }

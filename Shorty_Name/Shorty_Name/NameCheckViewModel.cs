@@ -13,21 +13,28 @@ namespace Shorty_Name
 
         public NameCheckViewModel()
         {
-            NameChecks = new ObservableCollection<NameCheck>();
+            NameChecks = new ObservableCollection<NameCheck>
+            {
+                new NameCheck("Mikael", false),
+                new NameCheck("Jerry", false),
+                new NameCheck("Hampus", false)
+            };
 
-            NameChecks.Add(new NameCheck("Mikael", false));
-            NameChecks.Add(new NameCheck("Jerry", false));
-            NameChecks.Add(new NameCheck("Hampus", false));
-            
         }
-        public ICommand AddNameCommand => new Command(addName);
+        public ICommand AddNameCommand => new Command(AddName);
         public string NewNameInput { get; set; }
-        void addName()
+        void AddName()
         {
             NameChecks.Add(new NameCheck(NewNameInput, false));
 
         }
+        public ICommand RemoveNameCommand => new Command(RemoveNameFromList);
+        void RemoveNameFromList(object o)
+        {
+            NameCheck NameRemoved = o as NameCheck;
+            NameChecks.Remove(NameRemoved);
 
+        }
 
 
     }

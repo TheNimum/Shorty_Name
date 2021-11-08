@@ -31,6 +31,8 @@
                             <ImageButton 
                                 Source="trashcan.png"
                                 Scale="0.4"
+                                Command="{Binding Path=BindingContext.RemoveNameCommand, Source={x:Reference NameCheck}}"
+                                CommandParameter="{Binding .}"
                                 />
 
                         </FlexLayout>

@@ -14,6 +14,6 @@ namespace Shorty_Name
         {
             InitializeComponent();
         }
-        
+
     }
 }
